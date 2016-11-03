@@ -1,11 +1,97 @@
----
-layout: base
----
-<div class="row">
-{% for keypair in site.tags %}
-{% assign tag = keypair | first%}
-{% if tag != site.sticky %}
-<a href="{{ tag | prepend: '/tags/' | prepend: site.baseurl }}"><div class="chip waves-effect waves-red">{{ tag }}</div></a>
-{% endif %}
-{% endfor %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="ewuriower, sticky, Random"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.png">
+    <title>Your awesome title</title>
+    <meta name="description" content="description">
+    <link rel="canonical" href="http://joshuaavalon.github.io/Jekyll-Avalon/tags.html" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" rel="stylesheet"  />
+	<link rel="stylesheet" href="/css/main.css">
+	
+    <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="/feed.xml" />
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <div class="container"><a href="#" data-activates="nav-bar" class="button-collapse"><i class="material-icons">menu</i></a></div>
+            <ul class="right hide-on-med-and-down ">
+                
+                <li><a href="/">Home</a></li>
+                
+                <li><a href="/categories.html">Categories</a></li>
+                
+                <li class="active"><a href="/tags.html">Tags</a></li>
+                
+            </ul>
+            <ul class="side-nav" id="nav-bar">
+                
+                <li><a href="/">Home</a></li>
+                
+                <li><a href="/categories.html">Categories</a></li>
+                
+                <li class="active"><a href="/tags.html">Tags</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+</header>
+<br/>
+<main>
+    <div class="container">
+        <div class="row">
+
+
+
+<a href="/tags/ewuriower"><div class="chip waves-effect waves-red">ewuriower</div></a>
+
+
+
+
+
+
+
+<a href="/tags/Random"><div class="chip waves-effect waves-red">Random</div></a>
+
+
 </div>
+    </div>
+</main>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                    content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2016 Avalon
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js" defer></script>
+<script src="/js/load.js" defer></script>
+
+</body>
+</html>
