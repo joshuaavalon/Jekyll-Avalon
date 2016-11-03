@@ -31,7 +31,7 @@ layout: base
         <ul class="slides">
             {% for post in posts %}
             <li>
-                <a href="{{ post.url }}">{% img post.thumbnail %}</a>
+                <a href="{{ post.url | prepend : site.baseurl }}">{% img post.thumbnail %}</a>
                 <div class="caption center-align">
                     <h3>{{ post.title }}</h3>
                 </div>
@@ -65,7 +65,7 @@ layout: base
                 <p class="truncate">{{post.excerpt}} </p>
                 {% endif %}
             </div>
-            <div class="card-action"><a href="{{ post.url }}">Read More</a></div>
+            <div class="card-action"><a href="{{ post.url | prepend: site.baseurl }}">{{ site.read_more }}</a></div>
             {% if post.thumbnail %}
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4 truncate">{{ post.title }}<i class="material-icons right">close</i></span>

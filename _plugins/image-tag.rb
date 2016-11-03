@@ -8,7 +8,7 @@ module Liquid
 	  end
 
 	  def render(context)
-		"<img class='lazy "+ (@class == nil ? "" : @class) +"' data-original='" + context[@path] + "'>"
+		"<img class='lazy "+ (@class == nil ? "" : @class) +"' data-original='" + context.registers[:site].baseurl + context[@path] + "'>"
 	  end
 	end
 	Liquid::Template.register_tag('img', ImageTag)
@@ -24,7 +24,7 @@ module Liquid
 	  end
 
 	  def render(context)
-		"<img class='lazy "+ (@class == nil ? "" : @class) +"' data-original='" + @path + "'>"
+		"<img class='lazy "+ (@class == nil ? "" : @class) +"' data-original='" + context.registers[:site].baseurl + context['baseurl'] + @path + "'>"
 	  end
 	end
 	Liquid::Template.register_tag('img_p', ImagePathTag)

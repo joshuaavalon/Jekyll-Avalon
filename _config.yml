@@ -1,7 +1,8 @@
 title: Your awesome title
 email: your-email@domain.com
 description: description
-url: http://joshuaavalon.github.io/Jekyll-Avalon
+baseurl: /Jekyll-Avalon
+url: http://joshuaavalon.github.io
 twitter_username: joshuaavalon
 github_username:  joshuaavalon
 
@@ -22,6 +23,7 @@ navigation:
   - text: Tags
     url: /tags.html
 
+read_more: Read More
 env: production
 minify_html: false # Set to true only when it is production. Increase significant build time.
 
