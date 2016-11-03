@@ -5,6 +5,12 @@
 ## About
 Jekyll-Avalon is a [Materialize](https://github.com/dogfalo/materialize) Jekyll theme.
 
+Featuring:
+* Material Design
+* Responsive Web Design
+* Tags and categories browsing
+* Lazy loading images
+
 ## Installation
 This theme ***CANNOT* be built by GitHub. You have to build it yourself.
 Use the following command to build.
