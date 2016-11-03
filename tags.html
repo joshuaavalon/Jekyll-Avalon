@@ -1,0 +1,11 @@
+---
+layout: base
+---
+<div class="row">
+{% for keypair in site.tags %}
+{% assign tag = keypair | first%}
+{% if tag != site.sticky %}
+<a href="{{ tag | prepend: '/tags/' | prepend: site.baseurl }}"><div class="chip waves-effect waves-red">{{ tag }}</div></a>
+{% endif %}
+{% endfor %}
+</div>

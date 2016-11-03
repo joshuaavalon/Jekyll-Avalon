@@ -1,0 +1,9 @@
+---
+layout: base
+---
+<div class="row">
+    {% for keypair in site.categories %}
+    {% assign category = keypair | first%}
+    <a href="{{ category | prepend: '/categories/' | prepend: site.baseurl }}"><div class="chip waves-effect waves-red">{{ category }}</div></a>
+    {% endfor %}
+</div>

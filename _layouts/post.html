@@ -1,0 +1,22 @@
+---
+layout: base
+---
+{% if page.cover %}
+<div class="row">
+{% img page.cover cover %}
+</div>
+{% endif %}
+<div class="row">
+<h2>{{ page.title }}</h2>
+<div class="valign-wrapper">
+<div class="author"><img src="{{ site.author_img | prepend: site.baseurl }}" class="circle responsive-img"></div> {% for category in page.categories %}<h5><a href="{{ category | prepend: '/categories/' | prepend: site.baseurl }}">{{ category }}</a>{% unless forloop.last%}, {% endunless %}{% endfor%} - {{ page.date | date: "%m/%d/%Y" }}</h5>
+</div>
+    {% for tag in page.tags %}
+    {% if tag != site.sticky %}
+    <a href="{{ tag | prepend: '/tags/' | prepend: site.baseurl }}"><div class="chip waves-effect waves-red">{{ tag }}</div></a>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="row">
+{{ content }}
+</div>
